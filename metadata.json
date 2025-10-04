@@ -1,0 +1,5 @@
+{
+  "name": "CIA: Candace Investigation Agency",
+  "description": "An interactive web application to visualize connections and investigations based on Candace Owens' videos, presented with a dark, neon, 'hacker movie' aesthetic.",
+  "requestFramePermissions": []
+}

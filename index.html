@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CIA: Candace Investigation Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+      body {
+        font-family: 'Roboto Mono', monospace;
+      }
+      .neon-text {
+        text-shadow:
+          0 0 5px #d8b4fe,
+          0 0 10px #d8b4fe,
+          0 0 20px #d8b4fe,
+          0 0 40px #a855f7,
+          0 0 80px #a855f7;
+      }
+       .neon-box {
+        box-shadow:
+          0 0 5px rgba(216, 180, 254, 0.5),
+          0 0 10px rgba(216, 180, 254, 0.5),
+          0 0 20px rgba(168, 85, 247, 0.3),
+          inset 0 0 5px rgba(168, 85, 247, 0.3);
+       }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "d3": "https://aistudiocdn.com/d3@^7.9.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
