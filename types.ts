@@ -1,9 +1,9 @@
-
 export interface Person {
   id: string;
   name: string;
   profile: string;
   mentions: string[];
+  imageUrl?: string;
 }
 
 export interface Connection {

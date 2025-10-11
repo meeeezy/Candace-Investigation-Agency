@@ -17,7 +17,6 @@ const SpiderMap: React.FC<SpiderMapProps> = ({ people, connections, onNodeClick 
     const width = svgRef.current.parentElement?.clientWidth || 800;
     const height = svgRef.current.parentElement?.clientHeight || 600;
 
-    // Clear previous SVG content
     d3.select(svgRef.current).selectAll('*').remove();
     
     const svg = d3.select(svgRef.current)
@@ -29,12 +28,31 @@ const SpiderMap: React.FC<SpiderMapProps> = ({ people, connections, onNodeClick 
     const nodes = people.map(d => ({...d}));
 
     const simulation = d3.forceSimulation(nodes as d3.SimulationNodeDatum[])
-      .force('link', d3.forceLink(links).id((d: any) => d.id).distance(120))
-      .force('charge', d3.forceManyBody().strength(-300))
-      .force('center', d3.forceCenter(0, 0));
+      .force('link', d3.forceLink(links).id((d: any) => d.id).distance(150))
+      .force('charge', d3.forceManyBody().strength(-400))
+      .force('center', d3.forceCenter(0, 0))
+      .force('collide', d3.forceCollide().radius(30));
+
+
+    // Define image patterns
+    const defs = svg.append('defs');
+    nodes.forEach(node => {
+        if (node.imageUrl) {
+            defs.append('pattern')
+                .attr('id', `img-${node.id}`)
+                .attr('width', 1)
+                .attr('height', 1)
+                .append('image')
+                .attr('xlink:href', node.imageUrl)
+                .attr('width', 30)
+                .attr('height', 30)
+                .attr('x', 0)
+                .attr('y', 0);
+        }
+    });
 
     const link = svg.append('g')
-      .attr('stroke', '#7e22ce') // purple-700
+      .attr('stroke', '#7e22ce')
       .attr('stroke-opacity', 0.6)
       .selectAll('line')
       .data(links)
@@ -52,18 +70,21 @@ const SpiderMap: React.FC<SpiderMapProps> = ({ people, connections, onNodeClick 
       .call(drag(simulation) as any);
 
     node.append('circle')
-      .attr('r', 12)
-      .attr('fill', '#1e293b') // slate-800
-      .attr('stroke', '#d8b4fe') // purple-300
+      .attr('r', 15)
+      .attr('fill', d => d.imageUrl ? `url(#img-${d.id})` : '#1e293b')
+      .attr('stroke', '#d8b4fe')
       .attr('stroke-width', 2);
 
     node.append('text')
       .text(d => d.name)
-      .attr('x', 18)
+      .attr('x', 20)
       .attr('y', 5)
-      .attr('fill', '#d8b4fe') // purple-300
-      .style('font-size', '12px')
-      .style('text-shadow', '0 0 3px #9333ea'); // purple-600
+      .attr('fill', '#d8b4fe')
+      .style('font-size', '14px')
+      .style('paint-order', 'stroke')
+      .style('stroke', '#111827')
+      .style('stroke-width', '3px')
+      .style('text-shadow', '0 0 4px #9333ea');
 
     simulation.on('tick', () => {
       link

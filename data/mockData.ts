@@ -4,7 +4,7 @@ export const operations: Operation[] = [
   {
     id: 'op-brigitte',
     title: 'Operation: Becoming Brigitte',
-    description: 'Investigating the connections surrounding the claims about Brigitte Macron.',
+    description: 'Where is her penis?',
     videoUrl: 'https://www.youtube.com/watch?v=EXAMPLE_BRIGITTE',
     people: [
       { id: 'candace', name: 'Candace Owens', profile: 'Lead Investigator and media personality.', mentions: ['Initiated investigation', 'Published findings on her platform', 'Cited Natacha Rey and Xavier Poussard as sources'] },
@@ -34,7 +34,7 @@ export const operations: Operation[] = [
   {
     id: 'op-epstein',
     title: 'Operation: Epstein Files',
-    description: 'Mapping the network of individuals connected to the Jeffrey Epstein case.',
+    description: 'Where are the files?',
     videoUrl: 'https://www.youtube.com/watch?v=viUdnvBhnWM',
     people: [
       { id: 'candace', name: 'Candace Owens', profile: 'Commentator analyzing the Epstein network and flight logs.', mentions: ['Covered the release of court documents', 'Discussed high-profile connections'] },
@@ -59,7 +59,7 @@ export const operations: Operation[] = [
   {
     id: 'op-weinstein',
     title: 'Operation: Harvey Weinstein',
-    description: 'Mapping the network of individuals connected to the Harvey Weinstein scandal.',
+    description: 'Just a misunderstood pig?',
     videoUrl: 'https://www.youtube.com/watch?v=EXAMPLE_WEINSTEIN',
     people: [
       { id: 'candace', name: 'Candace Owens', profile: 'Commentator discussing the case.', mentions: ['Provided commentary on the trial', 'Discussed Hollywood culture'] },
@@ -81,7 +81,7 @@ export const operations: Operation[] = [
     {
     id: 'op-diddy',
     title: 'Operation: P. Diddy',
-    description: 'Analyzing the network of associates and accusers in the P. Diddy allegations.',
+    description: 'How much is enough baby oil?',
     videoUrl: 'https://www.youtube.com/watch?v=EXAMPLE_DIDDY',
     people: [
       { id: 'candace', name: 'Candace Owens', profile: 'Commentator covering the unfolding legal issues.', mentions: ['Analyzed court filings', 'Discussed implications for the music industry'] },
@@ -105,16 +105,7 @@ export const operations: Operation[] = [
     description: 'Examining the network and topics discussed in the Justin Baldoni investigation.',
     videoUrl: 'https://www.youtube.com/watch?v=Q_udFpwwy74',
     people: [
-      {
-        id: 'candace',
-        name: 'Candace Owens',
-        profile: 'Commentator providing analysis on the lawsuit filed against Justin Baldoni.',
-        mentions: [
-          'Analyzed the legal arguments and allegations presented in the court filings.',
-          'Discussed the potential impact of the lawsuit on Baldoni\'s public image.',
-          'Highlighted specific claims made by the plaintiffs in the case.'
-        ]
-      },
+      { id: 'candace', name: 'Candace Owens', profile: 'Commentator providing analysis on the lawsuit filed against Justin Baldoni.', mentions: ['Analyzed the legal arguments and allegations presented in the court filings.', 'Discussed the potential impact of the lawsuit on Baldoni\'s public image.', 'Highlighted specific claims made by the plaintiffs in the case.']},
       { id: 'baldoni', name: 'Justin Baldoni', profile: 'Actor, director, and author, known for "Jane the Virgin" and the book "Man Enough".', mentions: ['Subject of analysis', 'Promotes redefining masculinity', 'Created Wayfarer Studios'] },
       { id: 'emily_baldoni', name: 'Emily Baldoni', profile: 'Actress and wife of Justin Baldoni.', mentions: ['Often appears with Justin in discussions about their relationship and family.'] },
       { id: 'jane_the_virgin', name: 'Jane the Virgin (Show)', profile: 'TV show where Justin Baldoni had a prominent role.', mentions: ['Catapulted Baldoni to fame.', 'Role as Rafael Solano.'] },
